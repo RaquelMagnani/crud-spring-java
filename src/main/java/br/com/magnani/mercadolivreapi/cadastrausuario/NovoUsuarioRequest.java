@@ -20,6 +20,11 @@ public class NovoUsuarioRequest {
 		this.email = email;
 		this.senha = senha;
 	}
+
+	public Usuario toUsuario() {
+		return new Usuario(email,new SenhaLimpa(senha));
+		
+	}
 	
 	
 }
