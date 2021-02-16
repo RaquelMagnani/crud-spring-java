@@ -28,6 +28,8 @@ public class Usuario {
 	@Length(min=6)
 	private String senha;
 	
+	@Deprecated
+	public Usuario() {}
 
 	public Usuario(@Email @NotBlank String email, 
 			@Valid @NotNull SenhaLimpa senhaLimpa) {
@@ -44,5 +46,18 @@ public class Usuario {
 	public String toString() {
 		return "Usuario [id= " +id + ", email = "+ email+ ", senha = " + senha + " ]";
 	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+	
 	
 }
